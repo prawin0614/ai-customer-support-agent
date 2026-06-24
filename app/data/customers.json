@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "Rajesh Kumar",
+    "email": "rajesh.kumar@gmail.com",
+    "product": "Sony Headphones",
+    "orderDate": "2026-06-10",
+    "amount": 2999,
+    "damagedProduct": false,
+    "productType": "physical"
+  },
+  {
+    "id": 2,
+    "name": "Priya Singh",
+    "email": "priya.singh@gmail.com",
+    "product": "Bluetooth Speaker",
+    "orderDate": "2026-06-15",
+    "amount": 4999,
+    "damagedProduct": false,
+    "productType": "physical"
+  },
+  {
+    "id": 3,
+    "name": "Amit Patel",
+    "email": "amit.patel@gmail.com",
+    "product": "Mechanical Keyboard",
+    "orderDate": "2026-06-05",
+    "amount": 7999,
+    "damagedProduct": false,
+    "productType": "physical"
+  },
+  {
+    "id": 4,
+    "name": "Neha Gupta",
+    "email": "neha.gupta@gmail.com",
+    "product": "Adobe Creative Cloud",
+    "orderDate": "2026-06-12",
+    "amount": 1999,
+    "damagedProduct": false,
+    "productType": "digital"
+  },
+  {
+    "id": 5,
+    "name": "Vikram Reddy",
+    "email": "vikram.reddy@gmail.com",
+    "product": "Udemy Course",
+    "orderDate": "2026-06-08",
+    "amount": 2999,
+    "damagedProduct": false,
+    "productType": "digital"
+  },
+  {
+    "id": 6,
+    "name": "Anjali Verma",
+    "email": "anjali.verma@gmail.com",
+    "product": "Microsoft Office 365",
+    "orderDate": "2026-06-17",
+    "amount": 3999,
+    "damagedProduct": false,
+    "productType": "digital"
+  },
+  {
+    "id": 7,
+    "name": "Rohit Sharma",
+    "email": "rohit.sharma@gmail.com",
+    "product": "Gaming Mouse",
+    "orderDate": "2026-06-09",
+    "amount": 8999,
+    "damagedProduct": true,
+    "productType": "physical"
+  },
+  {
+    "id": 8,
+    "name": "Divya Mishra",
+    "email": "divya.mishra@gmail.com",
+    "product": "Webcam",
+    "orderDate": "2026-06-11",
+    "amount": 5999,
+    "damagedProduct": true,
+    "productType": "physical"
+  },
+  {
+    "id": 9,
+    "name": "Arjun Nair",
+    "email": "arjun.nair@gmail.com",
+    "product": "Monitor",
+    "orderDate": "2026-06-14",
+    "amount": 9999,
+    "damagedProduct": true,
+    "productType": "physical"
+  },
+  {
+    "id": 10,
+    "name": "Sneha Desai",
+    "email": "sneha.desai@gmail.com",
+    "product": "Wireless Earbuds",
+    "orderDate": "2026-01-10",
+    "amount": 4999,
+    "damagedProduct": false,
+    "productType": "physical"
+  },
+  {
+    "id": 11,
+    "name": "Karthik Raman",
+    "email": "karthik.raman@gmail.com",
+    "product": "Smart Watch",
+    "orderDate": "2026-02-01",
+    "amount": 6999,
+    "damagedProduct": false,
+    "productType": "physical"
+  },
+  {
+    "id": 12,
+    "name": "Meera Rao",
+    "email": "meera.rao@gmail.com",
+    "product": "Tablet",
+    "orderDate": "2026-03-01",
+    "amount": 7999,
+    "damagedProduct": false,
+    "productType": "physical"
+  },
+  {
+    "id": 13,
+    "name": "Suresh Kumar",
+    "email": "suresh.kumar@gmail.com",
+    "product": "LG OLED TV",
+    "orderDate": "2026-06-15",
+    "amount": 25000,
+    "damagedProduct": false,
+    "productType": "physical"
+  },
+  {
+    "id": 14,
+    "name": "Pooja Singh",
+    "email": "pooja.singh@gmail.com",
+    "product": "Gaming Laptop",
+    "orderDate": "2026-06-16",
+    "amount": 50000,
+    "damagedProduct": false,
+    "productType": "physical"
+  },
+  {
+    "id": 15,
+    "name": "Ishaan Malhotra",
+    "email": "ishaan.malhotra@gmail.com",
+    "product": "MacBook Pro",
+    "orderDate": "2026-06-18",
+    "amount": 150000,
+    "damagedProduct": false,
+    "productType": "physical"
+  }
+]
