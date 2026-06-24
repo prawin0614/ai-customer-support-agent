@@ -40,37 +40,6 @@ export default function RefundChatInterface() {
     scrollToBottom();
   }, [messages]);
 
-  // Check for completed decisions and update messages
-  useEffect(() => {
-    const checkCompletedDecisions = () => {
-      const completedDecisions = JSON.parse(localStorage.getItem('completedDecisions') || '{}');
-      
-      setMessages((prevMessages) =>
-        prevMessages.map((msg) => {
-          if (msg.decision && msg.decision.customerId in completedDecisions) {
-            const completed = completedDecisions[msg.decision.customerId];
-            return {
-              ...msg,
-              decision: {
-                ...msg.decision,
-                decision: completed.decision === 'APPROVED' ? 'APPROVED' : 'DENIED',
-                reason: completed.decision === 'APPROVED' 
-                  ? `Refund has been approved by manager. Amount: Rs.${msg.decision.amount} will be processed to ${msg.decision.customerDetails.email}.`
-                  : `Refund has been rejected by manager.`,
-              },
-            };
-          }
-          return msg;
-        })
-      );
-    };
-
-    const interval = setInterval(checkCompletedDecisions, 1000);
-    checkCompletedDecisions(); // Check immediately
-
-    return () => clearInterval(interval);
-  }, []);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -113,24 +82,6 @@ export default function RefundChatInterface() {
       };
 
       setMessages((prev) => [...prev, agentMessage]);
-
-      // If decision requires manager approval, save to pending approvals
-      if (decision.decision === 'PENDING_MANAGER_APPROVAL') {
-        const pendingApprovals = JSON.parse(localStorage.getItem('pendingApprovals') || '[]');
-        const newRequest = {
-          id: Date.now(),
-          customerId: parseInt(customerId),
-          customerName: decision.customerDetails.name,
-          email: decision.customerDetails.email,
-          product: decision.customerDetails.product,
-          amount: decision.customerDetails.amount,
-          orderDate: decision.customerDetails.orderDate,
-          requestedAt: new Date().toISOString(),
-          reason: decision.reason,
-        };
-        pendingApprovals.push(newRequest);
-        localStorage.setItem('pendingApprovals', JSON.stringify(pendingApprovals));
-      }
     } catch (error) {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),

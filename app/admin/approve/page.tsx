@@ -123,15 +123,6 @@ export default function ApprovalWorkflow() {
       const updated = pendingApprovals.filter((req: any) => req.customerId !== selectedRequest.id);
       localStorage.setItem('pendingApprovals', JSON.stringify(updated));
 
-      // Store the decision in completedDecisions
-      const completedDecisions = JSON.parse(localStorage.getItem('completedDecisions') || '{}');
-      completedDecisions[selectedRequest.id] = {
-        decision: 'REJECTED',
-        timestamp: new Date().toISOString(),
-        managerNotes: notes,
-      };
-      localStorage.setItem('completedDecisions', JSON.stringify(completedDecisions));
-
       // Reload pending requests
       const remaining = updated.map((req: any) => ({
         id: req.customerId,
@@ -311,7 +302,7 @@ export default function ApprovalWorkflow() {
           <div className="space-y-4">
             <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
               <p className="text-sm text-blue-900 dark:text-blue-200">
-                <strong>Customer:</strong> {selectedRequest.customer}
+                <strong>Customer:</strong> {selectedRequest.name}
               </p>
               <p className="text-sm text-blue-900 dark:text-blue-200 mt-1">
                 <strong>Amount:</strong> ₹{selectedRequest.amount.toLocaleString()}
